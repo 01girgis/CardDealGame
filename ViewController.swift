@@ -27,6 +27,19 @@ class ViewController: UIViewController {
             //pass to the Gui
             leftImg.image = UIImage(named: "card\(leftImgRand)")
             rightImg.image = UIImage(named: "card\(rightImgRand)")
+            
+            //conditions checker
+                    if leftImgRand > rightImgRand  {
+                        playerCounter += 1
+                        print(playerCounter)
+                        playerScore.text = String(playerCounter)
+                    }
+                   
+                    else if leftImgRand < rightImgRand {
+                        cpuCounter += 1
+                        print(cpuCounter)
+                        cpuScore.text = String(cpuCounter)
+                    }
         }
 }
 
